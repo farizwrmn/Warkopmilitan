@@ -64,10 +64,10 @@
             color: white;
         }
         .reg {
-            background-color: rgb(115, 10, 133);
+            background-color: rgb(193, 189, 189);
         }
         .reg:hover {
-            background-color: rgb(204, 15, 237);
+            background-color: gray;
             color: white;
             transition-duration: 0.2s;
         }
@@ -85,18 +85,33 @@
         body {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/spikes.png);
         }
-
+        
     </style>
 </head>
 <body>
     <!-- Heading -->
-    <h1> Please Sign in :</h1>
+    <h1>Sign Up:</h1>
     <!-- Form -->
     <form action="" method="post">
         <div>
+            <!-- Firstname -->
+            <label for="nama">First Name: </label>
+            <input type="text" name="nama" id="nama" autofocus required>
+        </div>
+        <div>
+            <!-- Lastname -->
+            <label for="nama">Last Name: </label>
+            <input type="text" name="nama" id="nama" autofocus required>
+        </div>
+        <div>
             <!-- Email -->
             <label for="email">E-mail Address: </label>
-            <input type="email" name="email" id="email" required autocomplete="on">
+            <input type="email" name="email" id="email" required autocomplete="on" value="">
+        </div>
+        <div>
+            <!-- Birthday -->
+            <label for="birthday">Birthdate</label>
+            <input type="date" name="birthday" id="birthday" value="" required>
         </div>
         <div>
             <!-- Password -->
@@ -104,11 +119,13 @@
             <input type="password" name="Password" id="Password" required>
         </div>
         <div>
+            <!-- Confirm Password -->
+            <label for="password">Confirm Password: </label>
+            <input type="password" name="Password" id="Password" required>
+        </div>
+        <div>
             <!-- Button -->
-            <a href="index.html">
-            <button type="submit">Sign in</button>
-            </a>
-            <button type="reg" name="reg" id="reg" class="reg">Sign up</button>
+            <button type="submit">Submit!</button>
         </div>
         <!-- Toggle -->
         <a href="" class="toggle">Dark Mode</a>
