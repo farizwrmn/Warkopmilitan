@@ -44,9 +44,10 @@
             border-radius: inherit;
 
         }
-        button {
+        
+        .reg {
+            background-color: rgb(115, 10, 133);
             margin: 5px;
-            background-color: #04AA6D; /* Green */
             border: none;
             color: white;
             padding: 10px 22px;
@@ -57,14 +58,6 @@
             border-radius: 10%;
             margin-top: 30px;
             cursor: pointer;
-        }
-        button:hover {
-            transition-duration: 0.2s;
-            background-color: green;
-            color: white;
-        }
-        .reg {
-            background-color: rgb(115, 10, 133);
         }
         .reg:hover {
             background-color: rgb(204, 15, 237);
@@ -85,7 +78,26 @@
         body {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/spikes.png);
         }
-
+        .tombol {
+            margin: 5px;
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10%;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        
+        .tombol:hover {
+            transition-duration: 0.2s;
+            background-color: green;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -96,7 +108,7 @@
         <div>
             <!-- Email -->
             <label for="email">E-mail Address: </label>
-            <input type="email" name="email" id="email" required autocomplete="on">
+            <input type="email" name="email" id="email" required autocomplete="on" autofocus>
         </div>
         <div>
             <!-- Password -->
@@ -105,10 +117,8 @@
         </div>
         <div>
             <!-- Button -->
-            <a href="index.html">
-            <button type="submit">Sign in</button>
-            </a>
-            <button type="reg" name="reg" id="reg" class="reg">Sign up</button>
+            <a class="nav-item nav-link btn btn-primary text-white tombol" href="index.html">Sign In</a>
+            <a class="reg" href="register.html">Sign Up</a>
         </div>
         <!-- Toggle -->
         <a href="" class="toggle">Dark Mode</a>

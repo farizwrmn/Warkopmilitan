@@ -85,7 +85,26 @@
         body {
     background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/spikes.png);
         }
+        .tombol {
+            margin: 5px;
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10%;
+            margin-top: 30px;
+            cursor: pointer;
+        }
         
+        .tombol:hover {
+            transition-duration: 0.2s;
+            background-color: green;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -125,7 +144,7 @@
         </div>
         <div>
             <!-- Button -->
-            <button type="submit">Submit!</button>
+            <a class="nav-item nav-link btn btn-primary text-white tombol" href="index.html">Submit!</a>
         </div>
         <!-- Toggle -->
         <a href="" class="toggle">Dark Mode</a>
