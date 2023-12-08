@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juragan Angkot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        form {
+            margin: 0;
+            padding: 0;
+        }
+        form div {
+            margin: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px;
+        }
+        input {
+            margin: 2px;
+            padding: 3px 2px;
+            font-size: 20px;
+        }
+        input:invalid,
+        input:required:invalid {
+            border: none;
+            outline: 2px solid red;
+            border-radius: 2px;
+        }
+        input:valid,
+        input:required {
+            border: 1px solid lightgreen;
+            outline: inherit;
+            border-radius: inherit;
+
+        }
+        button {
+            margin: 5px;
+            background-color: #04AA6D; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10%;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        button:hover {
+            transition-duration: 0.2s;
+            background-color: green;
+            color: white;
+        }
+        .reg {
+            background-color: rgb(193, 189, 189);
+        }
+        .reg:hover {
+            background-color: gray;
+            color: white;
+            transition-duration: 0.2s;
+        }
+        a {
+            background-color: inherit;
+            color: inherit;
+            margin-top: 20px;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Heading -->
+    <h1> Please Log-in :</h1>
+    <!-- Form -->
+    <form action="" method="post">
+        <div>
+            <!-- Nama -->
+            <label for="nama">Full Name: </label>
+            <input type="text" name="nama" id="nama" autofocus required>
+        </div>
+        <div>
+            <!-- Email -->
+            <label for="email">E-mail Address: </label>
+            <input type="email" name="email" id="email" required autocomplete="on">
+        </div>
+        <div>
+            <!-- Password -->
+            <label for="password">Password: </label>
+            <input type="password" name="Password" id="Password" required>
+        </div>
+        <div>
+            <!-- Button -->
+            <button type="submit">Submit!</button>
+            <button type="reg" name="reg" id="reg" class="reg">Register</button>
+        </div>
+        <!-- Toggle -->
+        <a href="" class="toggle">Dark Mode</a>
+    </form>
+
+    <!-- Canvas -->
+    <canvas id="mycanvas"></canvas>
+
+    <!-- Toggle Darkmode / Lightmode -->
+<script>
+    const toggle = document.querySelector('.toggle');
+    let tema = localStorage.getItem('tema');
+
+    if(!tema) {
+        localStorage.setItem('tema', 'light');
+    }
+
+    const darkMode = () => {
+        document.body.classList.add('dark-mode');
+        toggle.innerHTML = 'Light Mode';
+        localStorage.setItem('tema', 'dark');
+    }
+
+    const lightMode = () => {
+        document.body.classList.remove('dark-mode');
+        toggle.innerHTML = 'Dark Mode';
+        localStorage.setItem('tema', 'light');
+    }
+
+    if(tema==='dark') {
+        darkMode();
+    }
+
+    toggle.addEventListener('click', function(e){
+        tema = localStorage.getItem('tema');
+        if(tema === 'light') {
+            darkMode();
+        } else {
+            lightMode();
+        }
+
+        e.preventDefault();
+    });
+</script> 
+</body>
+</html>
