@@ -2,7 +2,7 @@
 
 /* Navbar */
 .navbar-brand {
-    font: 32px Viga;
+    font: 32px monaco;
 }
 
 
@@ -37,9 +37,9 @@
     font-weight: 200;
     font-size: 2.6em;
     margin-top: 100px;
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: viga;
 }
 
 .jumbotron .display-4 span {
@@ -49,7 +49,7 @@
 
 /* Info Panel */
 .info-panel {
-    background-color: greenyellow;
+    background-color: darkseagreen;
     padding: 30px;
     margin-top: -120px;
     border-radius: 12px;
